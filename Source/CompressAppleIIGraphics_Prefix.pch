@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'CompressIIX' target in the 'CompressAppleIIGraphics' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

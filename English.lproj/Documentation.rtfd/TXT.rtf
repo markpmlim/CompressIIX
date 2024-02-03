@@ -1,0 +1,202 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\vieww16660\viewh14320\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs32 \cf0 =========================== Resize Window with this line as a guide =============================\
+The program 
+\b CompressIIX
+\b0  can encode Apple II graphic files to output compressed files in one of the following formats:\
+\
+a) LZ4 compression format,\
+b) AppleIIGS PackBytes format, and,\
+c) LZ4FH format\
+\
+It can also inflate the compressed files.\
+\
+
+\b Compression
+\b0 \
+\
+On launching, a single drag-and-drop window will be presented on the desktop. Currently, 3 compressing algorithms are available viz. 
+\b LZ4, LZ4FH
+\b0  and 
+\b PackBytes
+\b0 . The user may select either one by clicking on the popup menu labelled 
+\b Compression:\
+
+\b0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\fs24 \cf0 {{\NeXTGraphic fig1.png \width10400 \height6820
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\fs32 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\b \cf0 Fig. 1
+\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+Beneath the 
+\b Compression: 
+\b0 popup menu are 2 radio buttons labelled 
+\b Fast Compression
+\b0  and 
+\b High Compression
+\b0 . \
+On program launching, the 
+\b Fast Compression 
+\b0 radio button is selected and a slider will be displayed to its right (fig. 1). There is another slider to the right of  the radio button labelled 
+\b Fast Compression
+\b0  but it's hidden. When the 
+\b High Compression
+\b0  radio button is clicked, its corresponding slider will appear and the slider next to the 
+\b Fast Compression 
+\b0 radio button will be hidden.  In other words, three of these 4 controls are enabled when the popup menu items 
+\b LZ4
+\b0  is selected.\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\fs24 \cf0 {{\NeXTGraphic fig2.png \width10400 \height6820
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\fs32 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\b \cf0 Fig. 2
+\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+If the 
+\b LZ4FH
+\b0  option is selected, the 2 sliders will be hidden (fig. 2). Only the radio buttons will be displayed but  chosen.\
+\
+When the 
+\b PackBytes
+\b0  option is selected, the sliders and radio buttons will be disabled (fig. 3).\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\fs24 \cf0 {{\NeXTGraphic fig3.png \width12080 \height8500
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\fs32 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\b \cf0 Fig. 3
+\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+To perform a compression, the user may drag-and-drop one or more files onto the yellow rectangular region of the single window. Only Apple II graphic files are accepted for compression. Folders are ignored. 
+\b CompressIIX
+\b0  will generate compressed files with a suffix of 
+\b LZ4, LZ4FH
+\b0  or 
+\b PAK
+\b0 . The compressed file will appear in the same folder as its uncompressed counterpart. Existing files will be overwritten the operation.\
+\
+
+\b Notes
+\b0 : \
+\
+1) The header info of a
+\b  LZ4
+\b0  file is similar to that supported by Brutal Deluxe. \
+\
+2) According to Yann Collet's documentation, a value of 0 indicates the default value will be used in the compression. For fast compression, the default is 1 whereas for high compression it is 9. \
+The range of values for the "Fast Compression" and "High Compression" sliders are 0-100 and 0-16 respectively. Nothing is mentioned about the upper limit for fast compression.\
+\
+3) Andy Fadden's documentation does not specify any numerical value for fast or high compression.\
+\
+Since this utility is meant to compress AppleII graphics, the length of the file to be deflated will be checked. The valid file sizes are 8184 - 8192 and 16 376 - 16 384 for HiRes and Double Hires graphic respectively.\
+\
+\
+
+\b Decompression
+\b0 \
+\
+CompressIIX can also inflate files which were compressed with the above-mentioned algorithms. These compressed files can be decompressed by\
+\
+a) a drag-and-drop of one or more selected items within a folder managed by Mac OS X onto  the same window.\
+b) a double-click on one or more selected items within a folder managed by Mac OS X .\
+c) opening one or more selected items within a folder managed by Mac OS X via Finder's Contextual Menu.\
+\
+Given below is a table indicating the supported ProDOS file-auxiliary types of files that can be dragged-and-dropped .\
+\
+File Type		Aux Type		Compressor	Description of File Contents\
+FOT($08)		$4000		PackBytes	Compressed HiRes File Data\
+FOT($08)		$4001		PackBytes	Compressed Double HiRes File Data\
+FOT($08)		$8005		LZ4			Compressed HiRes File Data\
+FOT($08)		$8006		LZ4			Compressed Double HiRes File Data\
+FOT($08)		$8066		LZ4FH		Compressed HiRes File Data\
+\
+Option a) should be used if the compressed files 
+\i don't
+\i0  have one of the suffixes 
+\b LZ4
+\b0 , 
+\b LZ4FH
+\b0  or 
+\b PAK
+\b0 ; they must have one of those ProDOS file-auxiliary types listed in the above table.\
+Options b) and c) can be chosen if the compressed files have one of the suffixes 
+\b LZ4
+\b0 , 
+\b LZ4FH
+\b0  or 
+\b PAK
+\b0  especially if they do not have an attached FinderInfo metadata.\
+\
+
+\b Notes
+\b0 :\
+\
+The file and auxiliary types of a AppleII ProDOS file are recorded as a Mac OS X extended file attribute named 
+\b com.apple.FinderInfo.
+\b0  The structure of this data blob is the same as that mentioned in 
+\b GSOS 6.x 
+\b0 or
+\b  Inside Macintosh
+\b0  documentation.\
+\
+\
+
+\b Some Technical Details
+\b0 \
+\
+The source code of the various compressors have been imported wholly or partly (with or without modifications) into the program source.\
+\
+Author		Name of Source Code File\
+Yann Collet		lz4.c and lz4hc.c\
+Andy Fadden		fhpack.cpp\
+Sheldon Simms	tohgr.c\
+\
+\
+The layout of the 16-byte header of the 
+\b LZ4
+\b0  format is as follows:\
+offset   0		0x184C2103 (Little Endian) magic number: \
+offset   4		Original File Size\
+offset   8		0x0000004C\
+offset 12		Compressed file size\
+\
+
+\b LZ4FH
+\b0  compressed files have a single byte header at offset 0: 0x66. Their common ProDOS file and auxiliary types is $08/$8066.\
+\
+The ProDOS file and auxiliary types $08/$4000 and $08/$4001 were assigned by Apple respectively to HiRes and Double HiRes graphics encoded with the 
+\b PackBytes
+\b0  algorithm. I have designated the ProDOS file and auxiliary types $08/$8005 and $08/$8006 to be 
+\b LZ4
+\b0  compressed HiRes and Double HiRes files respectively.\
+}
