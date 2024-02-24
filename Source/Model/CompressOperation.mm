@@ -31,6 +31,7 @@ const uint8_t lz4fhHeader = 0x66;
 
 @synthesize finished = _finished;
 @synthesize executing = _executing;
+@synthesize srcURL = _srcURL;
 @synthesize delegate = _delegate;
 
 - (id)initWithURL:(NSURL *)url
@@ -58,7 +59,7 @@ const uint8_t lz4fhHeader = 0x66;
 	[super dealloc];
 }
 
-// These 2 keypaths are monitored by an instance of NSOperationQueue
+// These 2 keypaths are monitored by the MainWindowController object.
 - (BOOL)isExecuting
 {
 	return self.executing;
@@ -70,6 +71,7 @@ const uint8_t lz4fhHeader = 0x66;
 }
 
 // Who will send the NSOperation object this message? NSOperationQueue?
+// Currently, there is no Progress Window.
 - (void)cancel
 {
 	[super cancel];
@@ -111,7 +113,10 @@ const uint8_t lz4fhHeader = 0x66;
 	}
 	else
     {
+        NSSound *ping = [NSSound soundNamed:@"Ping"];
+        [ping play];
 		NSLog(@"LZ4FH compression failed: File is not an Apple II Hires Graphic.");
+        [self cancel];
 	}
 
 }
@@ -232,7 +237,7 @@ const uint8_t lz4fhHeader = 0x66;
 		[self packBytesCompress];
 	}
 	
-	// To test progress window. Currently there is no progress window.
+	// To test progress window. Currently, there is no progress window.
 	//usleep(1000000);
 	[self willChangeValueForKey:@"isExecuting"];
 	self.executing = NO;

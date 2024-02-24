@@ -24,6 +24,7 @@ NSString *const compressedDataKey = @"Compressed Data";
 @implementation DecompressOperation
 @synthesize finished;
 @synthesize executing;
+@synthesize srcURL = _srcURL;
 @synthesize delegate = _delegate;   // Not used.
 
 -(id)initWithURL:(NSURL *)url
@@ -31,7 +32,7 @@ NSString *const compressedDataKey = @"Compressed Data";
 	self = [super init];
 	if (self)
     {
-		_srcURL = [url retain];		// must retain this because paths was set to autorelease
+		_srcURL = [url retain];		// must retain this because path was set to autorelease
 	}
 	return self;
 }
@@ -132,7 +133,7 @@ NSString *const compressedDataKey = @"Compressed Data";
 	LZ4Format format = [appDelegate identifyFormatWithFileData:fileContents];
 	u_int32_t compressedSize;
 	u_int32_t originalSize = 0;
-	
+
 	if (format == kFHPackLZ4) 
     {
 		compressedSize = fileContents.length - 1;
@@ -256,7 +257,6 @@ NSString *const compressedDataKey = @"Compressed Data";
 			NSLog(@"magic number not found");
 			goto bailOut;
 		}
-
 
 		uint32_t headerSize = 16;
 		memcpy(&tmp, (uint8_t*)originalData.bytes+4, sizeof(uint32_t));
@@ -397,7 +397,6 @@ bailOut:
 		[self willChangeValueForKey:@"isFinished"];
 		self.finished = YES;
 		[self didChangeValueForKey:@"isFinished"];
-		
 	}
 
 bailOut:

@@ -8,9 +8,6 @@
 
 #import "AppDelegate.h"
 #import "MainWindowController.h"
-//#import "ProgressWindowController.h"
-//#import "TaskViewController.h"
-//#import "TaskView.h"
 #import "DecompressOperation.h"
 
 @implementation AppDelegate
@@ -22,7 +19,6 @@ FILE *logFilePtr = NULL;
 
 - (id)init
 {
-	//NSLog(@"min version:%d", __MAC_OS_X_VERSION_MIN_REQUIRED);
 	if (NSAppKitVersionNumber < 949) 
     {
 		// Pop up a warning dialog, 
@@ -141,18 +137,7 @@ FILE *logFilePtr = NULL;
 			NSLog(@"Could not open the console log file. All messages will be sent to system log.");
 		}
 	}
-
-/*
-	[self.progressWinController showWindow:nil];
-	// These should be moved somewhere since they must be released either
-	// when the compress/decompress operations have finished or are cancelled.
-	TaskViewController *prog1 = [[TaskViewController alloc] initWithOperation:YES];
-	[self.progressWinController addSubview:(TaskView *)[prog1 view]];
-	TaskViewController *prog2 = [[TaskViewController alloc] initWithOperation:NO];
-	[self.progressWinController addSubview:(TaskView *)[prog2 view]];
-	TaskViewController *prog3 = [[TaskViewController alloc] initWithOperation:YES];
-	[self.progressWinController addSubview:(TaskView *)[prog3 view]];
-*/
+/* */
 }
 
 

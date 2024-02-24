@@ -103,7 +103,7 @@
 		BOOL isDir;
 		NSArray *paths = [pboard propertyListForType:NSFilenamesPboardType];
 		id appDelegate = [NSApp delegate];
-		MainWindowController *winCtlr = [[self window] windowController];
+		MainWindowController *winCtlr = (MainWindowController *)[[self window] windowController];
 		NSMutableArray *filteredPaths = [NSMutableArray array];
 		NSMutableArray *filteredCompressedPaths = [NSMutableArray array];
 
@@ -176,7 +176,7 @@
                                         // worry about what's in the notification
 						context: NULL];
 
-				// Watch for when this operation starts executing, so we can update
+				// Watch when this operation starts executing, so we can update
 				// the user interface. Currently, there is no progress window.
 				[op addObserver:(id)winCtlr
 					 forKeyPath:@"isExecuting"
@@ -201,7 +201,7 @@
                                             // worry about what's in the notification
 						context: NULL];
 
-				// Watch for when this operation starts executing, so we can update
+				// Watch when this operation starts executing, so we can update
 				// the user interface. Currently, there is no progress window.
 				[op addObserver:(id)winCtlr
 					 forKeyPath:@"isExecuting"

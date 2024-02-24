@@ -72,11 +72,13 @@
     {
 		//printf("LZ4\n");
 		[self.lz4CompressionMethods setEnabled:YES];
-		if (self.isFastCompression == YES) {
+		if (self.isFastCompression == YES)
+        {
 			[self.fastCompressionSlider setHidden:NO];
 			[self.fastCompressionSlider setEnabled:YES];
 		}
-		else {
+		else
+        {
 			[self.highCompressionSlider setHidden:NO];
 			[self.highCompressionSlider setEnabled:YES];
 		}
@@ -146,14 +148,19 @@
     if ([keyPath isEqualToString: @"isFinished"]) 
     {
         // If it's done, it has inflated/deflated the file.
-	/*
+	
 		if ([object isKindOfClass:[DecompressOperation class]])
-			printf("All files have been decompressed\n");
+        {
+            DecompressOperation *op = (DecompressOperation *)object;
+            NSString *path = [op.srcURL path];
+			printf("%s has been inflated: \n", [path cStringUsingEncoding:NSASCIIStringEncoding]);
+        }
 		else
-			printf("All files have been compressed\n");
-		
-		NSLog(@"Finished:%@", object);
-	*/
+        {
+            CompressOperation *op = (CompressOperation *)object;
+            NSString *path = [op.srcURL path];
+			printf("%s has been deflated: \n", [path cStringUsingEncoding:NSASCIIStringEncoding]);
+		}
         // Unhook the observation for this particular object.
         [object removeObserver:self
 					forKeyPath:@"isFinished"];
@@ -161,12 +168,14 @@
 					forKeyPath:@"isExecuting"];
 		
     }
-	else if ([keyPath isEqualToString: @"isExecuting"]) {
+	else if ([keyPath isEqualToString: @"isExecuting"])
+    {
         DecompressOperation *op = (DecompressOperation *)object;
-       
-		//NSLog(@"still executing:%@", object);
+        NSString *path = [op.srcURL path];
+        printf("%s currently deflated: \n", [path cStringUsingEncoding:NSASCIIStringEncoding]);
     }
-	else {
+	else
+    {
         // The notification is uninteresting to us, let someone else handle it.
         [super observeValueForKeyPath:keyPath
 							 ofObject:object

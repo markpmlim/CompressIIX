@@ -19,6 +19,7 @@
 
 @property (readwrite) BOOL              finished;
 @property (readwrite) BOOL              executing;
+@property (readwrite, retain) NSURL     *srcURL;
 @property (retain) MainWindowController *delegate;
 
 - (id)initWithURL:(NSURL *)url;
