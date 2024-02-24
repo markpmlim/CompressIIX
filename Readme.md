@@ -8,4 +8,7 @@ Output to a console file can be viewed using Apple's Console.app. The program ha
 
 The user can turn off this feature by commenting out the code if he/she is running the program under XCode.
 
+XCode 3.2.x
 
+Runtime:
+macOS 10.5.x
